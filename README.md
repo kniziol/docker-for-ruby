@@ -6,7 +6,16 @@ Useful for creating new, empty application.
 
 ## Step 1
 
-Clone this repository or copy its files to your project
+Clone this repository or copy to your project these files:
+
+- `.env`
+- `docker-compose.yaml`
+- `Dockerfile`
+- `entrypoint.sh`
+- `Gemfile`
+- `Gemfile.lock`
+
+All files from root directory, besides `images/`, `.gitattributes` and `README.md`.
 
 ## Step 2
 
@@ -75,9 +84,13 @@ $ docker compose up -d
 Create all databases:
 
 ```shell
-$ docker compose run --rm web rake db:create
+$ docker compose exec web rake db:create
 ```
 
 ## Step 7
 
-Open application by entering http://localhost:3000 in web browser. Enjoy!
+Open application by entering http://localhost:3000 in web browser:
+
+![application is running](images/application-is-running.png)
+
+Enjoy!
